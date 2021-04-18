@@ -1,3 +1,4 @@
+python==3.8.8
 imbalanced_learn==0.8.0
 tensorflow_gpu==2.4.0
 matplotlib==3.4.1
