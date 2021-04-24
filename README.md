@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-A Bank wants to take care of customer retention for its product: savings accounts. The bank wants to identify customers likely to churn balances below the minimum balance. The dataset havs the customer information such as age, gender, demographics along with their transactions with the bank.
+A Bank wants to take care of customer retention for its product: savings accounts. The bank wants to identify customers likely to churn balances below the minimum balance. The dataset has the customer information such as age, gender, demographics along with their transactions with the bank.
 The task would be to predict the propensity to churn for each customer.
 
 ## Data Dictionary
@@ -41,14 +41,14 @@ There are multiple variables in the dataset which can be cleanly divided into 3 
 
 ## Code and Resources Used
 
-Python version - 3.8.5
-Packages: pandas, numpy, scikit-learn, matplotlib, seaborn,plotly, imbalanced-learn, hyperopt,joblib, and streamlit.
+Python version - 3.8.5 (in runtime.txt)
+Packages: pandas, numpy, scikit-learn, matplotlib, seaborn, plotly, imbalanced-learn, hyperopt,joblib, and streamlit.
 For Web Framework Requirements: pip install -r requirements.txt
 Cloud Platform for deployment - Heroku.
 
 ## Data Cleaning and EDA
 
-After loading the data, I examined about the nature of features and how they are relevant to target variable and through univariate(histogram for numerical and pie charts for categorical features) and bivariate(scatterplots for defining relation between target and numerical features and pivot tables for defining categorical-target relationships) analysis.
+After loading the data, I examined about the nature of features and how they are relevant to target variable through univariate(histogram for numerical and pie charts for categorical features) and bivariate(scatterplots for defining numerical-target relationships and pivot tables for defining categorical-target relationships) analysis.
 
 Splitting of data into train and test.
 
@@ -60,15 +60,15 @@ Saved the results into separate train and test sets for model building.
 
 ## Model Buidling
 
-Firstly,identified how many features should be relevant for model using cross validation and f1 score.(it was found to be 7)
+Identified how many features should be relevant for model using cross validation and f1 score.(it was found to be 7)
 
 Identified those important seven features using Recursive Feature Elimination technique with Decision trees.
 
-As it was found to be an imbalanced dataset,therefore using SVMSMOTE oversampling and Random Under Sampler of imbalanced-learn package to remove class imbalance in form of an pipeline.
+As it was found to be an imbalanced dataset,therefore using SVMSMOTE oversampling and Random Under Sampler of imbalanced-learn package to remove class imbalance in engulfing the two into an pipeline.
 
-Scaling of data using RobustScaler.
+Scaling of sampled data using RobustScaler.
 
-I tried below classifiers as an baseline using f1 score as an metric on training dataset-
+I tried below classifiers as an baseline using f1 score as an metric on sampled dataset-
 
 Logistic Regression - 0.806 
 
@@ -90,7 +90,7 @@ Saving the model using joblib.
 
 The model was converted into an API using streamlit and deployed in Heroku.
 
-The API takes input through an form built using streamlit and then make predictions in form of probabilites of whether a customer will stay in the bank or not.
+The API takes input through an form built using streamlit and then make predictions in form of probabilites of whether a customer will stay in bank or not.
 
 API link - https://bank-customer-churn-app.herokuapp.com/
 
