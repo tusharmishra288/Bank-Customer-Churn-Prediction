@@ -60,8 +60,11 @@ There are multiple variables in the dataset which can be cleanly divided into 3 
 ## Code and Resources Used
 
 Python version - 3.8.5 (in runtime.txt)
+
 Packages: pandas, numpy, scikit-learn, matplotlib, seaborn, plotly, imbalanced-learn, hyperopt,joblib, and streamlit.
+
 For Web Framework Requirements: pip install -r requirements.txt
+
 Cloud Platform for deployment - Heroku.
 
 ## Data Cleaning and EDA
