@@ -1,4 +1,4 @@
-joblib==0.17.0
+joblib==1.2.0
 streamlit==0.80.0
 xgboost==1.4.0
 hyperopt==0.2.5
