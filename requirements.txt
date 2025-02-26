@@ -1,5 +1,5 @@
-joblib==0.17.0
-streamlit==1.30.0
+joblib==1.2.0
+streamlit==1.37.0
 xgboost==1.4.0
 hyperopt==0.2.5
 imbalanced_learn==0.8.0
